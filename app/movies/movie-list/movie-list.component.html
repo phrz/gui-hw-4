@@ -1,0 +1,30 @@
+<nav>
+	<button class="btn btn-primary pull-right">Add movie</button>
+	<div class="clearfix"></div>
+</nav>
+<div class="well" *ngIf="movies.length == 0">
+	There are no movies in the database.
+</div>
+<div class="media" *ngFor="let movie of movies">
+	<span class="media-left">
+		<img [src]="movie.imagePath" alt="{{ movie.title }}" />
+	</span>
+	<div class="media-body">
+		<h4 class="media-heading">
+			{{ movie.title }} ({{ movie.year }}) 
+			<button class="btn btn-link movie-edit-button" (click)="goTo('/edit/' + movie.id )">
+				<i class="glyphicon glyphicon-edit"></i>
+			</button>
+			<button class="btn btn-link movie-delete-button" (click)="didClickDelete( movie )">
+				<i class="glyphicon glyphicon-trash"></i>
+			</button>
+		</h4>
+		<span class="rating">
+		   <span class="glyphicon"
+		   	  *ngFor="let value of [1,2,3,4,5]"
+		      [ngClass]="{ 'glyphicon-star': movie.rating >= value, 'glyphicon-star-empty': (movie.rating||0) < value }"
+		      (click)="movie.rating = value"></span>
+			<span class="badge">{{movie.rating || 0}}/5</span>
+		</span>
+	</div>
+</div>

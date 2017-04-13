@@ -1,0 +1,1 @@
+{"version":3,"file":"movie-editor.component.js","sourceRoot":"","sources":["movie-editor.component.ts"],"names":[],"mappings":";;;;;;;;AAAA,wCAA0C;AAQ1C,IAAa,oBAAoB,GAAjC;CAEC,CAAA;AAFY,oBAAoB;IANhC,gBAAS,CAAC;QACT,QAAQ,EAAE,MAAM,CAAC,EAAE;QACnB,QAAQ,EAAE,cAAc;QACxB,WAAW,EAAE,6BAA6B;QAC1C,SAAS,EAAE,CAAE,4BAA4B,CAAE;KAC5C,CAAC;GACW,oBAAoB,CAEhC;AAFY,oDAAoB"}
